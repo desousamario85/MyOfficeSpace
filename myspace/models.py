@@ -47,6 +47,9 @@ class Meeting_Rooms_Booked(models.Model):
     def __str__(self):
         return self.meeting_id
 
+    class Meta:
+        ordering = ['created_on']
+
 
 class Office_Spaces_Booked(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -58,3 +61,6 @@ class Office_Spaces_Booked(models.Model):
 
     def __str__(self):
         return self.Office_Space_id
+
+    class Meta:
+        ordering = ['created_on']
