@@ -6,7 +6,7 @@ class category(models.Model):
     ID = models.IntegerField(primary_key=True)
     category_name = models.CharField(max_length=20)
     def __str__(self):
-        return (self.category_name)
+        return str(self.category_name)
 
 class office_spaces(models.Model):
     ID = models.IntegerField(primary_key=True)
@@ -16,13 +16,13 @@ class office_spaces(models.Model):
         on_delete=models.CASCADE
         )
     def __str__(self):
-        return (self.office_name)
+        return str(self.office_name)
 
 class status(models.Model):
     ID = models.IntegerField(primary_key=True)
     status_name = models.CharField(max_length=10)
     def __str__(self):
-        return (self.status_name)
+        return str(self.status_name)
 
 class meeting_rooms(models.Model):
     ID = models.IntegerField(primary_key=True)
@@ -32,4 +32,4 @@ class meeting_rooms(models.Model):
         on_delete=models.CASCADE
         )
     def __str__(self):
-        return (self.meeting_name)
+        return str(self.meeting_name)
