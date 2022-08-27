@@ -14,7 +14,7 @@ class Category(models.Model):
         return self.category_name
 
 class Office_Spaces(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.IntegerField(primary_key=True,unique=True,)
     office_name = models.CharField(max_length=50)
     category_id = models.ForeignKey(
         Category,

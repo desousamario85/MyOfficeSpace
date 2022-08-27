@@ -12,4 +12,6 @@ from .models import Office_Spaces_Booked
 # Register your models here.
 
 admin.site.register(Office_Spaces)
+admin.site.register(Category)
+
 
