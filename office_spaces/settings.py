@@ -36,8 +36,13 @@ ALLOWED_HOSTS = ['myofficespace.herokuapp.com', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+
+    # Custom Admin Tools
     'admin_interface',
     'colorfield',
+
+    # Default Apps
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,7 +51,11 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+
+    # My Apps
+
     'myspace',
+    'myspace.booking_functions'
 ]
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
