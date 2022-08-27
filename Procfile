@@ -1,0 +1,1 @@
+web: gunicorn office_spaces.wsgi
