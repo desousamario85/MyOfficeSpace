@@ -1,35 +1,66 @@
 from django.db import models
+from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
-class category(models.Model):
-    ID = models.IntegerField(primary_key=True)
-    category_name = models.CharField(max_length=20)
-    def __str__(self):
-        return str(self.category_name)
+STATUS = ((0, "Open"), (1, "Booked"), (2, "Cancelled"))
 
-class office_spaces(models.Model):
-    ID = models.IntegerField(primary_key=True)
+class Category(models.Model):
+    id = models.IntegerField(primary_key=True)
+    category_name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.category_name
+
+class Office_Spaces(models.Model):
+    id = models.IntegerField(primary_key=True)
     office_name = models.CharField(max_length=50)
     category_id = models.ForeignKey(
-        category,
+        Category,
         on_delete=models.CASCADE
         )
-    def __str__(self):
-        return str(self.office_name)
 
-class status(models.Model):
-    ID = models.IntegerField(primary_key=True)
-    status_name = models.CharField(max_length=10)
     def __str__(self):
-        return str(self.status_name)
+        return self.office_name
 
-class meeting_rooms(models.Model):
-    ID = models.IntegerField(primary_key=True)
+class Meeting_Rooms(models.Model):
+    id = models.IntegerField(primary_key=True)
     meeting_name = models.CharField(max_length=50)
     category_id = models.ForeignKey(
-        category,
+        Category,
         on_delete=models.CASCADE
         )
+
     def __str__(self):
-        return str(self.meeting_name)
+        return self.meeting_name
+
+
+class Meeting_Rooms_Booked(models.Model):
+    id = models.IntegerField(primary_key=True)
+    meeting_id = models.ForeignKey(Meeting_Rooms)
+    category_id = models.ForeignKey(
+        Category,
+        on_delete=models.CASCADE
+        )
+    user = models.ForeignKey(User)
+    status = models.IntegerField(choices=STATUS, default=1)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.meeting_name
+
+
+class Office_Spaces_Booked(models.Model):
+    id = models.IntegerField(primary_key=True)
+    Office_Space_id = models.ForeignKey(Office_Space)
+    category_id = models.ForeignKey(
+        Category,
+        on_delete=models.CASCADE
+        )
+    user = models.ForeignKey(User)
+    status = models.IntegerField(choices=STATUS, default=1)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.meeting_name
