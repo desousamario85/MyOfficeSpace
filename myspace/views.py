@@ -56,3 +56,7 @@ class BookingView(FormView):
         else:
             return HttpResponse('No available offices for selected category.'
                                 'Please try another category')
+
+
+def index(request):
+    return  render(request, 'index.html', {})
