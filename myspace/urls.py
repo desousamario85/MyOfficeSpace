@@ -1,10 +1,7 @@
+from .views import OfficeList, OfficeBookedList
 from django.urls import path
-from .views import OfficeList as OL
-from .views import OfficeBookingList as OBL
-
-app_name = 'myspace'
 
 urlpatterns = [
-    path('office_list/', OL().as_view(), name='OL'),
-    path('office_bookings_list/', OBL().as_view(), name='OBL'),
+    path('office_list/', OfficeList().as_view(), name='officelist'),
+    path('office_bookings/', OfficeBookedList().as_view(), name='officebookings'),
 ]
