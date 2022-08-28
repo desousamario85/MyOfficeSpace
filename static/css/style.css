@@ -6,9 +6,83 @@
 }
 
 body {
-    background: #bbbbbb;
+    background: #f0f0f0;
     overflow-x: hidden;
     font-family: 'Montserrat Alternates', sans-serif;
     color: #fff;
     font-weight: bold;
+}
+
+
+hr {
+    border: 1px solid azure;
+}
+
+/* Header */
+
+.logo {
+    background-image: url("https://res.cloudinary.com/myofficespace/image/upload/v1661628039/static/images/logo.ee76c40e67a4.png");
+
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: fit;
+    max-height: 200px;
+    max-width: 100%;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+
+
+header {
+    background-color: #fff;
+    height: 100px;
+
+}
+
+#nav {
+    float: right;
+
+}
+
+#nav li {
+    float: left;
+    display: flex;
+    padding: 0 20px;
+    text-decoration: none;
+    line-height: 75px;
+
+
+}
+
+/* Footer */
+
+footer {
+
+    background-color: #fff;
+    height: 100px;
+    clear: both
+}
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks>li {
+    display: inline;
+}
+
+.social-networks i:hover {
+    color: #333;
+}
+
+.social-networks i {
+    font-size: 120%;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 1%;
+    padding-right: 1%;
 }
