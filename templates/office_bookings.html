@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +7,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Office List</title>
+    <title>Office Bookings</title>
 </head>
 
 <body>
-    {%for bookings in office_bookings%}
+    {% for booking in office_bookings %}
     <h2>{bookings}</h2>
     {% endfor %}
 </body>

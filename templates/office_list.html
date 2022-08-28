@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book a Office</title>
+    <title>Office List</title>
 </head>
 
 <body>
-    <form action="" method="POST">
-        {{form.as.p}}
-        {% csfr_token %}
-        <button type="submit">Book Office</button>
 
-    </form>
+    <h1> My Office Spaces</h1>
+    {% for office in office_list %}
+    <h2>{office}</h2>
+    {% endfor %}S
 </body>
 
 </html>

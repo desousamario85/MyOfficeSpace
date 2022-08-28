@@ -20,6 +20,12 @@ class OfficeBookedList(generic.ListView):
     List of Office Spaces
     """
     model = Office_Spaces_Booked
+    def get_queryset(self, *args, **kwargs):
+        if self.request.user.is_staff:
+            booking_list = Office_Spaces_Booked.objects.all()
+            return booking_list
+        else:
+            booking_list = Office_Spaces_Booked.objects.filter(user=self.request.user)
     template_name = 'office_bookings.html'
 
 class BookingView(FormView):
@@ -28,13 +34,14 @@ class BookingView(FormView):
 
     def form_valid(self, form):
         data = form.cleaned_data
-        office_list = Office_Spaces.objects.filter(category_name=data['category_name'])
+        office_list = Office_Spaces.objects
         available_offices = []
 
         for office in office_list:
-            if check_availability(office_name, data['start_datetime'], data['end_datetime']):
+            if check_availability(office_name, data['start_datetime'], 
+                                  data['end_datetime']):
                 available_offices.append(office)
-        if len(available_offices) >0:
+        if len(available_offices) > 0:
             office = available_offices[0]
             booking = Office_Spaces_Booked.objects.create(
                 user = request.user,
@@ -47,4 +54,5 @@ class BookingView(FormView):
             booking.save()
             return HttpResponse(booking)
         else:
-            return HttpResponse('No available offices for selected category. Please try another category')
+            return HttpResponse('No available offices for selected category.'
+                                'Please try another category')
