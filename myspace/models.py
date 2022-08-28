@@ -54,11 +54,10 @@ class Office_Spaces_Booked(models.Model):
     status = models.IntegerField(choices=STATUS, default=1)
     created_on = models.DateTimeField(auto_now_add=True)
     start_datetime = models.DateTimeField()
-    end_datetime = models.DateTimeField()
-
+    end_datetime = models.DateTimeField()  
 
     def __str__(self):
-        return self.Office_Space_id
+        return f'{self.Office_Space_id} was booked for {self.start_datetime} until {self.end_datetime}'
 
     class Meta:
         ordering = ['created_on']

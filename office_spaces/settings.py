@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'colorfield',
 
     # Default Apps
-    
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     # My Apps
 
     'myspace',
-    'myspace.booking_functions'
+    'myspace.booking_function'
 ]
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
