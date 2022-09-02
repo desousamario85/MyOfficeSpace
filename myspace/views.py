@@ -14,6 +14,7 @@ class OfficeList(generic.ListView):
     """
     model = Office_Spaces
     template_name = 'index.html'
+    paginate_by = 6
     
 class OfficeBookedList(generic.ListView):
     """
@@ -27,6 +28,7 @@ class OfficeBookedList(generic.ListView):
         else:
             booking_list = Office_Spaces_Booked.objects.filter(user=self.request.user)
     template_name = 'office_bookings.html'
+    paginate_by = 10
 
 class BookingView(FormView):
     form_class = AvailabilityForm
