@@ -1,15 +1,18 @@
 {% extends "base.html" %}
 
-{%block content %}
+{% block content %}
 
 <!-- Page content  Start-->
 
 <div class="container-fluid">
     <div class="row">
+        <h1>Select an Office</h1>
 
         <div class="col-12 mt-3 left">
             <div class="row">
-                <h1>Hello World!</h1>
+                {% for office_spaces in object_list %}
+                <h2>{office_spaces}</h2>
+                {% endfor %}
             </div>
         </div>
     </div>

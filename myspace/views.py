@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.views.generic import FormView
-from django.views import generic
+from django.views import generic, View
 from .models import Office_Spaces
 from .models import Office_Spaces_Booked
 from .forms import AvailabilityForm
@@ -13,6 +13,7 @@ class OfficeList(generic.ListView):
     List of Office Spaces
     """
     model = Office_Spaces
+    queryset = Office_Spaces.objects.order_by("-office_name")
     template_name = 'index.html'
     paginate_by = 6
     
