@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,14 +29,21 @@
                     <a href="#">
                         <li>Home</li>
                     </a>
-                    <a href="#">
-                        <li>My Bookings</li>
-                    </a>
-                    <a href="#">
-                        <li>Login</li>
-                    </a>
-                    <a href="#">
-                        <li>Sign Up</li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    {% endif %}
                     </a>
                 </ul>
             </div>
@@ -42,9 +51,12 @@
 
     <hr>
 
-    <section>
+    <main class="flex-shrik-0 main-bg">
+        { % block content %}
+        <!-- Content goes here-->
+        {% endblock content %}
 
-    </section>
+    </main>
 
     <hr>
 
