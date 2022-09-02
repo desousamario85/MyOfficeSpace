@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.forms import ModelForm
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
@@ -9,7 +10,7 @@ STATUS = ((0, "Open"), (1, "Booked"), (2, "Cancelled"))
 class Category(models.Model):
     category_name = models.CharField(max_length=20)
     
-    def __str__(self):
+    def get_types(self):
         return self.category_name
 
 class Office_Spaces(models.Model):
