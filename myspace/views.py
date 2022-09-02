@@ -13,7 +13,7 @@ class OfficeList(generic.ListView):
     List of Office Spaces
     """
     model = Office_Spaces
-    template_name = 'office_list.html'
+    template_name = 'index.html'
     
 class OfficeBookedList(generic.ListView):
     """
@@ -58,5 +58,3 @@ class BookingView(FormView):
                                 'Please try another category')
 
 
-def index(request):
-    return  render(request, 'index.html', {})
