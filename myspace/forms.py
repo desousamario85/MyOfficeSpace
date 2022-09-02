@@ -15,7 +15,7 @@ class ContactForm(forms.Form):
 
 
 class AvailabilityForm(forms.Form):
-    category_name = forms.CharField(widget=forms.ChoiceField(choices=at_obj.get_types()))
+    category_name = forms.ChoiceField(choices=at_obj.get_types())
     start_datetime = forms.SplitDateTimeField(required=True,
                                               widget=forms.DateTimeInput(attrs={'type': 'datetime-local'}))
     end_datetime = forms.SplitDateTimeField(required=True, 
