@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from django.views.generic import FormView
 from django.views import generic, View
-from .models import Office_Spaces ,Category
+from .models import Office_Spaces ,Office_Types
 from .models import Office_Spaces_Booked
 from .forms import AvailabilityForm, ContactForm
 from myspace.booking_function.availability import check_availability

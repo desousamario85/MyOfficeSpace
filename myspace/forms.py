@@ -1,9 +1,10 @@
 from django import forms
 from captcha.fields import ReCaptchaField
 from captcha.widgets import ReCaptchaV2Checkbox
-from .models import Category
+from .models import Office_Types
+from django.forms import ModelChoiceField
 
-at_obj = Category()
+at_obj = Office_Types()
 
 class ContactForm(forms.Form):
     name = forms.CharField()
@@ -15,8 +16,8 @@ class ContactForm(forms.Form):
 
 
 class AvailabilityForm(forms.Form):
-    category_name = forms.ChoiceField(choices=at_obj.get_types())
-    start_datetime = forms.SplitDateTimeField(required=True,
+    office_type = ModelChoiceField(queryset=Office_Types.objects.all())
+    start_datetime = forms.DateTimeField(required=True,
                                               widget=forms.DateTimeInput(attrs={'type': 'datetime-local'}))
-    end_datetime = forms.SplitDateTimeField(required=True, 
+    end_datetime = forms.DateTimeField(required=True, 
                                             widget=forms.DateTimeInput(attrs={'type': 'datetime-local'}))
