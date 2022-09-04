@@ -5,6 +5,8 @@ from .models import Office_Spaces ,Office_Types
 from .models import Office_Spaces_Booked
 from .forms import AvailabilityForm, ContactForm
 from myspace.booking_function.availability import check_availability
+from django.conf import settings
+from django.shortcuts import redirect
 
 # Create your views here.
 
@@ -72,3 +74,5 @@ class ContactFormView(FormView):
         return super().form_valid(form)
 
 
+def error_404_view(request, exception):
+    return render(request, '404.html')
