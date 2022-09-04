@@ -4,6 +4,7 @@ from captcha.widgets import ReCaptchaV2Checkbox
 from .models import Office_Types
 from django.forms import ModelChoiceField
 
+
 at_obj = Office_Types()
 
 class ContactForm(forms.Form):

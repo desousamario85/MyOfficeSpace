@@ -11,7 +11,14 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for office_spaces in object_list %}
-                <h2>{office_spaces}</h2>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-text"><strong>Office Name</strong></h3>
+                        <h4>{{office_spaces}}</h4>
+                        <p><strong>Size: </strong>{{office_spaces.office_type}}</p>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
         </div>

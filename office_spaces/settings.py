@@ -62,7 +62,8 @@ INSTALLED_APPS = [
     # My Apps
 
     'myspace',
-    'myspace.booking_function'
+    'myspace.booking_function',
+    'crispy_forms'
 ]
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
@@ -71,6 +72,8 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL ='/'
 LOGOUT_REDIRECT_URL ='/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 # ReCaptcha settings
 

@@ -15,7 +15,7 @@ class OfficeList(generic.ListView):
     List of Office Spaces
     """
     model = Office_Spaces
-    queryset = Office_Spaces.objects.order_by("-office_name")
+
     template_name = 'index.html'
     paginate_by = 6
     
