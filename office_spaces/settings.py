@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     #Authenication
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
     'django.contrib.sites',
     'captcha',
 
@@ -68,6 +69,8 @@ X_FRAME_OPTIONS = "SAMEORIGIN"
 SILENCED_SYSTEM_CHECKS = ["security.W019"]
 SITE_ID = 1
 
+LOGIN_REDIRECT_URL ='/'
+LOGOUT_REDIRECT_URL ='/'
 
 # ReCaptcha settings
 
@@ -180,3 +183,5 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
