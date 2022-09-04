@@ -1,3 +1,6 @@
+/* Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto:wght@300&display=swap')
+
 /*Site Default Settings*/
 * {
     margin: 0;
@@ -8,7 +11,7 @@
 body {
     background: #f0f0f0;
     overflow-x: hidden;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #fff;
     font-weight: bold;
 }
@@ -18,8 +21,9 @@ hr {
     border: 1px solid azure;
 }
 
-h1 {
+h1 h2 h3 {
     color: #E78200;
+    font-family: 'PT Serif', serif;
 }
 
 /* Header */
