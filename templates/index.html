@@ -12,7 +12,7 @@
             <div class="row">
                 {% for office_spaces in object_list %}
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <img class="card-img-top" src="{{ office_spaces.office_image.url }}" alt="{{ office_spaces.description }}">
                     <div class="card-body">
                         <h3 class="card-text"><strong>Office Name</strong></h3>
                         <h4>{{office_spaces}}</h4>

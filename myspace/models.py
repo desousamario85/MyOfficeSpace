@@ -11,6 +11,8 @@ STATUS = ((0, "Open"), (1, "Booked"), (2, "Cancelled"))
 
 class Office_Types(models.Model):
     office_type = models.CharField(max_length=20,default="Small")
+    office_image = models.ImageField(upload_to='images/',null=True)
+    description = models.TextField(null=True)
     
     def __str__(self):
         return self.office_type

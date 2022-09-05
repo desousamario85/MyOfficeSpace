@@ -1,13 +1,13 @@
 from django.shortcuts import render, HttpResponse
 from django.views.generic import FormView
 from django.views import generic, View
-from .models import Office_Spaces ,Office_Types
+from .models import Office_Spaces, Office_Types
 from .models import Office_Spaces_Booked
 from .forms import AvailabilityForm, ContactForm
 from myspace.booking_function.availability import check_availability
 from django.conf import settings
 from django.shortcuts import redirect
-
+from django.conf.urls.static import static
 # Create your views here.
 
 class OfficeList(generic.ListView):
@@ -15,7 +15,6 @@ class OfficeList(generic.ListView):
     List of Office Spaces
     """
     model = Office_Spaces
-
     template_name = 'index.html'
     paginate_by = 6
     

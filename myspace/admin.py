@@ -14,3 +14,4 @@ from .models import Office_Spaces_Booked
 admin.site.register(Office_Spaces)
 admin.site.register(Office_Types)
 admin.site.register(Office_Spaces_Booked)
+

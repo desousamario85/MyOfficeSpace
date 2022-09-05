@@ -3,6 +3,7 @@ from myspace.models import Office_Spaces as office;
 from myspace.models import STATUS as status;
 from myspace.models import Office_Spaces_Booked as office_bookings;
 
+
 def check_availability(office_name,start_datetime,end_datetime):
     avail_list=[]
     office_booked_list= office_bookings.objects.filter(office_name=office_name)
@@ -12,3 +13,4 @@ def check_availability(office_name,start_datetime,end_datetime):
         else:
             avail_list.append(False)
     return all(avail_list)
+
