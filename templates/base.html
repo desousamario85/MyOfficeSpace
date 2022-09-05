@@ -19,10 +19,10 @@
     <!--Google Fonts End-->
 
     <!--CSS Stylesheet Start-->
-
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
     <!--CSS Stylesheet End-->
 
     <title>My Office Space</title>
@@ -31,7 +31,7 @@
 <body>
     <header>
         <div class="row no-gutters">
-            <a class="col-md-4 logo" href="02-index.html"></a>
+            <a class="col-md-4 logo" href="/"></a>
             <div class="col-md-8">
                 <div class="row no-gutters bg-color-name-title">
                 </div>
@@ -55,6 +55,11 @@
                     </li>
                     {% endif %}
                     </a>
+                    {% if user.is_superuser %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">Admin</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
     </header>
