@@ -20,7 +20,7 @@ hr {
     border: 1px solid azure;
 }
 
-h1 h2 h3 {
+.headings {
     color: #E78200;
     font-family: 'PT Serif', serif;
 }
@@ -63,6 +63,40 @@ header {
     line-height: 75px;
 
 }
+
+/* Cards */
+
+.card-body p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.card-body h2 h3 h6 {
+    color: #E78200;
+    font-family: 'PT Serif', serif;
+}
+
+.card-body h6,
+
+.card-body p {
+    display: inline;
+    vertical-align: top;
+    line-height: 20px;
+}
+
+.card-body h6 {
+    font-weight: bold;
+}
+
+.card-img-top {
+    height: 200px;
+    background-color: red;
+}
+
+
+
+
+
 
 /* Footer */
 

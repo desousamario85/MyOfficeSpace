@@ -12,11 +12,12 @@
             <div class="row">
                 {% for office_spaces in object_list %}
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ office_spaces.office_image.url }}" alt="{{ office_spaces.description }}">
+                    <img class="card-img-top" src="{{ office_spaces.office_type.office_image.url }}" alt=" {{ office_spaces.description }}">
                     <div class="card-body">
-                        <h3 class="card-text  headings"><strong>Office Name</strong></h3>
-                        <h4>{{office_spaces}}</h4>
-                        <p><strong>Size: </strong>{{office_spaces.office_type}}</p>
+                        <div>
+                            <h6 class="headings"><strong>Office Name: </strong></h6>{{office_spaces}}
+                        </div>
+                        <h6 class="headings"><strong>Size: </strong></h6>{{office_spaces.office_type}}
                     </div>
                 </div>
                 {% endfor %}
