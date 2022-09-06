@@ -1,38 +1,56 @@
-{% load static %}
+{% extends "base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Office Bookings</title>
-</head>
+<div class="container-fluid">
 
-<body>
-    {% for office_spaces_booked in object_list %}
-    <h2>{office_spaces_booked}</h2>
-    {% endfor %}
+    <div class="row">
+        <h1 class="headings">My Bookings</h1>
+        <table class="table">
+            <thead>
+                <tr>
 
-    <!--Pagination Start -->
+                    <th scope="col">Office Name</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col" class="icon-center">Delete</th>
 
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+                </tr>
+            </thead>
+            <tbody>
+                {% for office_spaces_booked in object_list %}
+                <tr>
+                    <td>{{office_spaces_booked.Office_Space_id}}</td>
+                    <td>{{office_spaces_booked.start_datetime}}</td>
+                    <td>{{office_spaces_booked.end_datetime}}</td>
+                    <td class="icon-center"><i class="fa fa-trash" aria-hidden="true"></i></td>
+                </tr>
+                {% endfor %}
 
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
+            </tbody>
+        </table>
 
-    <!--Pagination End -->
 
+        <!--Pagination Start -->
+
+        {% if is_paginated %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+
+        <!--Pagination End -->
+    </div>
+</div>
+{%endblock %}
 </body>
 
 </html>

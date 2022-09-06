@@ -9,7 +9,7 @@
 }
 
 body {
-    background: #f0f0f0;
+    background: #fff;
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -17,7 +17,8 @@ body {
 
 
 hr {
-    border: 1px solid azure;
+    border: 2px solid #f0f0f0;
+
 }
 
 .headings {
@@ -39,13 +40,15 @@ hr {
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
     margin: 0 auto;
-    background-color: #fff;
+
+    ;
 }
 
 
 
 header {
-    background-color: #fff;
+
+
     height: 100px;
 
 }
@@ -60,11 +63,18 @@ header {
     display: flex;
     padding: 0 20px;
     text-decoration: none;
-    line-height: 75px;
+    line-height: 55px;
+
 
 }
 
 /* Cards */
+.card {
+
+    margin: 1%;
+}
+
+
 
 .card-body p {
     font-family: 'Roboto', sans-serif;
@@ -90,9 +100,14 @@ header {
 
 .card-img-top {
     height: 200px;
-    background-color: red;
+
 }
 
+.card:hover {
+
+    background-color: antiquewhite;
+    cursor: pointer;
+}
 
 
 
@@ -127,5 +142,21 @@ footer {
     line-height: 100px;
     padding-left: 1%;
     padding-right: 1%;
+
+}
+
+
+.icon-center {
+    text-align: center;
+}
+
+i.fa.fa-trash {
+    color: red;
+
+}
+
+i.fa.fa-trash:hover {
+    color: rgb(143, 16, 16);
+    cursor: pointer;
 
 }

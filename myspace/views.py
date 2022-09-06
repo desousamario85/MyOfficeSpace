@@ -38,28 +38,28 @@ class BookingView(FormView):
 
     def form_valid(self, form):
         data = form.cleaned_data
-        office_list = Office_Spaces.objects.filter(category_id=data['category_name'])
+        office_list = Office_Spaces.objects.filter(office_name=data['office_name'])
         available_offices = []
 
         for office in office_list:
-            if check_availability(office_name, data['start_datetime'],
+            if check_availability(data['office_name'], data['start_datetime'],
                                   data['end_datetime']):
                 available_offices.append(office)
         if len(available_offices) > 0:
             office = available_offices[0]
             booking = Office_Spaces_Booked.objects.create(
-                user = request.user,
+                user = self.request.user,
                 Office_Space_id = office,
                 start_datetime=data['start_datetime'],
                 end_datetime=data['end_datetime'],
-                status="Booked"
+                status=1
 
             )
             booking.save()
             return HttpResponse(booking)
         else:
-            return HttpResponse('No available offices for selected category.'
-                                'Please try another category')
+            return HttpResponse('Office is not available.'
+                                'Please try a different office or change the dates.)
 
 
 
@@ -75,3 +75,5 @@ class ContactFormView(FormView):
 
 def error_404_view(request, exception):
     return render(request, '404.html')
+
+

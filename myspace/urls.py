@@ -12,5 +12,5 @@ urlpatterns = [
     path('', OfficeList.as_view(), name='OfficeList'),
     path('office_bookings/', OfficeBookedList.as_view(), name='OfficeBookedList'),
     path('book/', BookingView.as_view(), name='BookingView'),
-    path('contact/', ContactFormView.as_view(), name='Contact')
+    path('contact/', ContactFormView.as_view(), name='Contact'),
 ] 

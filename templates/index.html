@@ -5,13 +5,32 @@
 <!-- Page content  Start-->
 
 <div class="container-fluid">
+
     <div class="row">
-        <h1 class="headings">Select an Office</h1>
+        <h1 class="headings">Welcome to My Office Space</h1>
+
+
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                <p>At My Office Space we provide start-ups and small business a place to call home.<br>
+                    With varies office sizes to suit any company's needs or even if they just want to host an event.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Displaying available desk we have to offer -->
+
+    <div class="row">
+        <h2 class="headings">Select an Office</h2>
 
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for office_spaces in object_list %}
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem;" onclick="location.href='book/'">
                     <img class="card-img-top" src="{{ office_spaces.office_type.office_image.url }}" alt=" {{ office_spaces.description }}">
                     <div class="card-body">
                         <div>

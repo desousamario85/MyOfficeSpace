@@ -39,6 +39,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Us</a>
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="#">My Bookings</a>
@@ -63,10 +66,9 @@
                 </ul>
             </div>
     </header>
-
     <hr>
 
-    <main class="flex-shrik-0 main-bg container-fluid">
+    <main class="flex-shrik-0 main-bg container">
 
         {% block content %}
 
