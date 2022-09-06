@@ -29,7 +29,57 @@ Fulvous is the main color for the site with a gray web as the secondary font
 
 ## Fonts
 
-Serif is main font selected for the selected to have for this site.
+San Serif and Roboto is main font selected for the selected to have for this site.
+
+
+## Deployment
+
+The game was deployed to Heroku without any errors.
+As it was only my second time deploying to Heroku, used the Code Institute Love Sandwiches walk through as a reminder. 
+
+I ensure I added my creds.json to the .gitignore file is ensure the sensitive information is not pushed to Github
+
+Was the code was ready and tested I run the ``` pip freeze > requirements.txt ```
+Once completed I published everything to GitHub using the commands below
+
+- ``` git add . ```
+- ``` git commit -m "{My commit message}" ```
+- ``` git push```
+
+- Logged in to Heroku
+- Created a new app
+- Provided a name of the App and selected a Region of Europe
+- Selected the Settings Tab
+- Under Build Packs I added Python and NodeJS in that order
+- Added my 2 config Vars, listed below
+  + PORT, VALUE: 8000
+  + DATABASE_URL: URL TO DB
+  + RECAPTCHA PRIVATE AND PUBLIC KEY ( Integration not completed.)
+- Selected the Deploy Tab
+- As my GitHub was already linked, I search for my repository for my project
+- Once linked I clicked on Deploy Branch under the Manual Deployment section
+
+## Technologies Used
+
+* HTML
+    * HTML was used to setup the core structure of the game. This was provided in the Code Institute Github Template  
+* CSS
+    * CSS stylesheet was used to style the website and gaming feature. This was provided in the Code Institute Github Template 
+
+* GitPod
+    * A GitPod Workspace was used to code the website. Using Code Institute GitHub Template some other predefined technologies are installed to allow developers to integrate to Git for versioning and Python3
+* GitHub
+    * Github was used to store our committed Source Code and have a live website using GitHub Pages.
+* Git 
+    * Version control, integrated with GitPod
+* Python
+    * Python is the language used to create the booking functions and views with Django
+* Django
+    * Django provides a frameworks to build our sites which has hosts of modules that can be imported to speed up development
+* Cloudinary
+    * Hosting platform for all our media and static files
+* Google ReCaptcha
+    * to validate that robots are not performing action on the site. The integration of this function is not completed yet on the site.
 
 # Credits
 
