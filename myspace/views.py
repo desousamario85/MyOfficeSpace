@@ -32,6 +32,7 @@ class OfficeBookedList(generic.ListView):
     template_name = 'office_bookings.html'
     paginate_by = 10
 
+
 class BookingView(FormView):
     form_class = AvailabilityForm
     template_name = 'availability.html'
@@ -59,7 +60,7 @@ class BookingView(FormView):
             return HttpResponse(booking)
         else:
             return HttpResponse('Office is not available.'
-                                'Please try a different office or change the dates.)
+                                'Please try a different office or change the dates.')
 
 
 
@@ -75,5 +76,13 @@ class ContactFormView(FormView):
 
 def error_404_view(request, exception):
     return render(request, '404.html')
+
+def delete_office_booking(request, booking_id):
+    booking = Office_Spaces_Booked.objects.get(id=booking_id)
+    booking.delete()
+    return redirect('/office_bookings')
+
+
+
 
 

@@ -52,6 +52,7 @@ class Meeting_Rooms_Booked(models.Model):
 
 
 class Office_Spaces_Booked(models.Model):
+    id = models.BigAutoField(primary_key=True)
     Office_Space_id = models.ForeignKey(Office_Spaces,on_delete=models.SET_NULL,null=True)
     office_type = models.ForeignKey(Office_Types,on_delete=models.SET_NULL,null=True)
     user = models.ForeignKey(User,on_delete=models.CASCADE)
