@@ -91,3 +91,4 @@ Once completed I published everything to GitHub using the commands below
  - Photo by David: https://www.pexels.com/photo/black-office-rolling-chair-beside-white-wooden-table-3712597/
  - Photo by Pixabay: https://www.pexels.com/photo/gray-office-rolling-chair-near-brown-wooden-desk-in-front-of-flat-screen-tv-on-white-painted-wall-37347/
  - Code Institute for provide the training and their videos help building the site on a very tight timeline.
+ - Darshan Dev -Youtube videos which helped with booking logics https://www.youtube.com/watch?v=-9dhCQ7FdD0&list=PL_6Ho1hjJirn8WbY4xfVUAlcn51E4cSbY
