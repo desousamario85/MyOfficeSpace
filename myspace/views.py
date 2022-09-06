@@ -8,6 +8,11 @@ from myspace.booking_function.availability import check_availability
 from django.conf import settings
 from django.shortcuts import redirect
 from django.conf.urls.static import static
+from django.contrib import messages
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpRequest
+
+
 # Create your views here.
 
 class OfficeList(generic.ListView):
@@ -67,13 +72,13 @@ class BookingView(FormView):
 class ContactFormView(FormView):
     template_name = 'contact.html'
     form_class = ContactForm
-    success_url = '/thanks/'
+    success_url = '/contact'
+    
 
     def form_valid(self, form):
-        form.send_email()
+        form.send_email()        
         return super().form_valid(form)
-
-
+               
 def error_404_view(request, exception):
     return render(request, '404.html')
 

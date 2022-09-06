@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% load account socialaccount %}
+{% load i18n %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
@@ -26,7 +26,7 @@
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
 
-                <button class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+                <button class="btn btn-success" type="submit">{% trans "Sign In" %}</button>
             </form>
         </div>
     </div>
