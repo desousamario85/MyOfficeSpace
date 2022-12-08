@@ -6,6 +6,8 @@
 <!-- Page content  Start-->
 <div class="container-fluid">
     <div class="row">
+        {% if user.is_authenticated %}
+
         <h1>Check Office Availability</h1>
 
         <div class="col-12 mt-3 left">
@@ -21,7 +23,11 @@
         </div>
     </div>
 
+    {% else %}
 
+    <h1>Please login to make a booking</h1>
+
+    {% endif %}
 
 </div>
 <!-- Page content End -->
