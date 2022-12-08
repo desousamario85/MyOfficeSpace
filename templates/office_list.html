@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Office List</title>
-</head>
+{% block content %}
 
-<body>
+<h1> My Office Spaces</h1>
+{% for office in office_list %}
+<h2>{office.office_name}</h2>
+{% endfor %}S
 
-    <h1> My Office Spaces</h1>
-    {% for office in office_list %}
-    <h2>{office.office_name}</h2>
-    {% endfor %}S
+{%endblock %}
 </body>
 
 </html>

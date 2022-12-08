@@ -33,7 +33,7 @@ class OfficeBookedList(generic.ListView):
             booking_list = Office_Spaces_Booked.objects.all()
             return booking_list
         else:
-            booking_list = Office_Spaces_Booked.objects.filter(user=self.request.user)
+            booking_list = Office_Spaces_Booked.objects.filter(user=self.request.user).order_by(id)
     template_name = 'office_bookings.html'
     paginate_by = 10
 
@@ -62,7 +62,7 @@ class BookingView(FormView):
 
             )
             booking.save()
-            return HttpResponse(booking)
+            return render(booking, 'confirmation.html ')
         else:
             return HttpResponse('Office is not available.'
                                 'Please try a different office or change the dates.')

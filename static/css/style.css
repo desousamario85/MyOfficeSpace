@@ -68,6 +68,12 @@ header {
 
 }
 
+.float-right {
+    float: right;
+    line-height: 25px;
+}
+
+
 /* Cards */
 .card {
 
