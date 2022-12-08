@@ -39,6 +39,23 @@
 
 <body>
     <header>
+        {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+            {% with message.level as level %}
+            {% if level == 40 %}
+            {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+            {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+            {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+            {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+            {% endwith %}
+            {% endfor %}
+        </div>
+        {% endif %}
         <div class="row no-gutters">
             <a class="col-md-4 logo" href="/"></a>
             <div class="col-md-8">
@@ -115,7 +132,16 @@
     <script src="https://kit.fontawesome.com/71b772ea4c.js" crossorigin="anonymous"></script>
 
     <!--Font Awesome Script End-->
+
+    {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
+    {% endblock %}
+
 </body>
 
 
 </html>
+
+</script>

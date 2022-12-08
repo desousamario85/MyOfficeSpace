@@ -18,7 +18,7 @@ if os.path.isfile("env.py"):
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -28,12 +28,13 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['myofficespace.herokuapp.com', 'localhost']
 
 
 # Application definition
+
 
 INSTALLED_APPS = [
 
@@ -99,7 +100,8 @@ ROOT_URLCONF = 'office_spaces.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates','allauth'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -192,3 +194,5 @@ AUTHENTICATION_BACKENDS = [
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'

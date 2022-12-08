@@ -14,6 +14,7 @@ urlpatterns = [
     path('office_bookings/', OfficeBookedList.as_view(), name='OfficeBookedList'),
     path('book/', BookingView.as_view(), name='BookingView'),
     path('contact/', ContactFormView.as_view(), name='Contact'),
-    path('delete_office_booking/<booking_id>', views.delete_office_booking, name='delete_office_booking')
+    path('delete_office_booking/<booking_id>', views.delete_office_booking, name='delete_office_booking'),  
+
 
 ] 

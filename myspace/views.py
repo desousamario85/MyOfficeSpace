@@ -11,6 +11,21 @@ from django.conf.urls.static import static
 from django.contrib import messages
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpRequest
+from django.contrib.messages.storage import default_storage
+
+__all__ = (
+    "add_message",
+    "get_messages",
+    "get_level",
+    "set_level",
+    "debug",
+    "info",
+    "success",
+    "warning",
+    "error",
+    "MessageFailure",
+)
+
 
 # Create your views here.
 
@@ -61,7 +76,8 @@ class BookingView(FormView):
 
             )
             booking.save()
-            return render(booking, 'confirmation.html ')
+            messages.success(self.request, " Booking Confirmed")
+            return redirect('/book')
         else:
             return HttpResponse('Office is not available.'
                                 'Please try a different office or change the dates.')
