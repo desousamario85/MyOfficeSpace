@@ -12,7 +12,6 @@ from django.contrib import messages
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpRequest
 
-
 # Create your views here.
 
 class OfficeList(generic.ListView):
@@ -86,8 +85,4 @@ def delete_office_booking(request, booking_id):
     booking = Office_Spaces_Booked.objects.get(id=booking_id)
     booking.delete()
     return redirect('/office_bookings')
-
-
-
-
 
