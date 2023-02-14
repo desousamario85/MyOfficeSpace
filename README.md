@@ -15,6 +15,12 @@ The data modal design was to keep it simple to create an MVP application which c
 
 # User Experience (UI/UX Design)
 
+## Responsive design
+
+Keeping the design simple and easy to following. the site is compatible with all devices.
+
+![Am I Responsive](docs/images/amiresponsive.png)
+
 ## Logo
 
 Logo was created by a free online tool, I have placed the link in the credits. They are very basic designs but great for personal website projects
@@ -46,15 +52,18 @@ Once completed I published everything to GitHub using the commands below
 - ``` git commit -m "{My commit message}" ```
 - ``` git push```
 
+- Set Debug to False in Setting.py file in project folder
 - Logged in to Heroku
 - Created a new app
 - Provided a name of the App and selected a Region of Europe
 - Selected the Settings Tab
 - Under Build Packs I added Python and NodeJS in that order
 - Added my 2 config Vars, listed below
+  + Cloudinary_URL: set to my cloudinary://[Link]
   + PORT, VALUE: 8000
   + DATABASE_URL: URL TO DB
-  + RECAPTCHA PRIVATE AND PUBLIC KEY ( Integration not completed.)
+  + RECAPTCHA PRIVATE AND PUBLIC KEY ( Not implemented.)
+  + Sercet _key: [My Secret Key]
 - Selected the Deploy Tab
 - As my GitHub was already linked, I search for my repository for my project
 - Once linked I clicked on Deploy Branch under the Manual Deployment section
@@ -79,7 +88,9 @@ Once completed I published everything to GitHub using the commands below
 * Cloudinary
     * Hosting platform for all our media and static files
 * Google ReCaptcha
-    * to validate that robots are not performing action on the site. The integration of this function is not completed yet on the site.
+    * to validate that robots are not performing action on the site. The integration of this function is not completed yet on the site. this feature was not implemented.
+* Built in PostgreSQL
+    * Database which hold the all records on bookings and user sign in credentials.
 
 # Credits
 
@@ -92,3 +103,4 @@ Once completed I published everything to GitHub using the commands below
  - Photo by Pixabay: https://www.pexels.com/photo/gray-office-rolling-chair-near-brown-wooden-desk-in-front-of-flat-screen-tv-on-white-painted-wall-37347/
  - Code Institute for provide the training and their videos help building the site on a very tight timeline.
  - Darshan Dev -Youtube videos which helped with booking logics https://www.youtube.com/watch?v=-9dhCQ7FdD0&list=PL_6Ho1hjJirn8WbY4xfVUAlcn51E4cSbY
+ - Code Institute module on Toast messages on the Ado Boutique walk through.
