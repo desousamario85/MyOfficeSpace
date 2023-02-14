@@ -76,12 +76,11 @@ class BookingView(FormView):
 
             )
             booking.save()
-            messages.success(self.request, " Booking Confirmed")
-            return redirect('/book')
+            messages.success(self.request, "Booking Confirmed")
+            return redirect('/office_bookings')
         else:
-            return HttpResponse('Office is not available.'
-                                'Please try a different office or change the dates.')
-
+            messages.error(self.request, "Office Slot already booked. Please try again")
+            return redirect('/book')
 
 
 class ContactFormView(FormView):
