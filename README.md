@@ -21,6 +21,26 @@ Keeping the design simple and easy to following. the site is compatible with all
 
 ![Am I Responsive](docs/images/amiresponsive.png)
 
+## Homepage (Unauthenticated User)
+
+![Homepage Unauthenticated](docs/images/homepage.png)
+
+## Homepage (Authenticated User)
+
+![Homepage Authenticated](docs/images/hompage_authuser.png)
+
+## My Bookings
+
+![My Bookings](docs/images/Mybookings.png)
+
+## Booking
+
+![Create a Bookings](docs/images/creatbooking.png)
+
+## Contact Us
+
+![Contact Us](docs/images/contactus.png)
+
 ## Logo
 
 Logo was created by a free online tool, I have placed the link in the credits. They are very basic designs but great for personal website projects
@@ -37,8 +57,7 @@ Fulvous is the main color for the site with a gray web as the secondary font
 
 San Serif and Roboto is main font selected for the selected to have for this site.
 
-
-## Deployment
+# Deployment
 
 The game was deployed to Heroku without any errors.
 As it was only my second time deploying to Heroku, used the Code Institute Love Sandwiches walk through as a reminder. 
@@ -68,7 +87,7 @@ Once completed I published everything to GitHub using the commands below
 - As my GitHub was already linked, I search for my repository for my project
 - Once linked I clicked on Deploy Branch under the Manual Deployment section
 
-## Technologies Used
+# Technologies Used
 
 * HTML
     * HTML was used to setup the core structure of the game. This was provided in the Code Institute Github Template  
