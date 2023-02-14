@@ -6,8 +6,8 @@ from django.forms import ModelChoiceField
 
 
 class ContactForm(forms.Form):
-    name = forms.CharField()
-    message = forms.CharField(widget=forms.Textarea)
+    name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Name', 'style': 'width: 300px;', 'class': 'form-control'}))
+    message = forms.EmailField(widget=forms.Textarea(attrs={'placeholder' :'Email', 'style': 'width: 300px;', 'class': 'form-control'}))
 
     def send_email(self):
        
