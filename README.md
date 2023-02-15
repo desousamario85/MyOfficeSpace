@@ -15,6 +15,26 @@ The data modal design was to keep it simple to create an MVP application which c
 
 # User Experience (UI/UX Design)
 
+## Wireframes
+
+Wireframe provided the an idea on how the layout of the application would look like as a finished product
+
+### Homepage
+
+![Wireframe Homepage](docs/images/homepage_wireframe.png)
+
+### Login
+
+![Wireframe Login](docs/images/login_wireframe.png)
+
+### Contact Us
+
+![Wireframe Contact Us](docs/images/contactus_wireframe.png)
+
+### My Bookings
+
+![Wireframe My Bookings](docs/images/mybookings_wireframe.png)
+
 ## Responsive design
 
 Keeping the design simple and easy to following. the site is compatible with all devices.
@@ -40,6 +60,10 @@ Keeping the design simple and easy to following. the site is compatible with all
 ## Contact Us
 
 ![Contact Us](docs/images/contactus.png)
+
+## Page Not Found
+
+![Contact Us](docs/images/pagenotefound.png)
 
 ## Logo
 
