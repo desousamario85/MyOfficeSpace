@@ -41,27 +41,36 @@ Keeping the design simple and easy to following. the site is compatible with all
 
 ![Am I Responsive](docs/images/amiresponsive.png)
 
-## Homepage (Unauthenticated User)
+### Homepage (Unauthenticated User)
 
 ![Homepage Unauthenticated](docs/images/homepage.png)
 
-## Homepage (Authenticated User)
+### Homepage (Authenticated User)
 
 ![Homepage Authenticated](docs/images/hompage_authuser.png)
 
-## My Bookings
+### My Bookings
 
 ![My Bookings](docs/images/Mybookings.png)
 
-## Booking
+### Booking
 
 ![Create a Bookings](docs/images/creatbooking.png)
 
-## Contact Us
+### Contact Us
 
 ![Contact Us](docs/images/contactus.png)
 
-## Page Not Found
+### Login
+
+![Login](docs/images/signuppage.png)
+
+### Sign Up
+
+![Sign up](docs/images/signuppage.png)
+
+
+### Page Not Found
 
 ![Contact Us](docs/images/pagenotefound.png)
 
@@ -80,6 +89,26 @@ Fulvous is the main color for the site with a gray web as the secondary font
 ## Fonts
 
 San Serif and Roboto is main font selected for the selected to have for this site.
+
+# Testing
+
+Basic test were perform to ensure users can create an account, booking and delete their bookings.
+
+Booking confirmation
+
+![Booking Successful](docs/images/booking_successful.png)
+
+Booking Error
+
+![Booking Error](docs/images/booking_error.png)
+
+Login Successful
+
+![Login Successful](docs/images/success_signin.png)
+
+Logout Successful
+
+![Login Successful](docs/images/Successsignout.png)
 
 # Deployment
 
